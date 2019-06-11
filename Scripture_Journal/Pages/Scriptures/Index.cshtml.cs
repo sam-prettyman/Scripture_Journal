@@ -42,11 +42,19 @@ namespace Scripture_Journal.Pages.Scriptures
             if (!string.IsNullOrEmpty(SearchString))
             {
                 scriptures = scriptures.Where(s => s.Notes.Contains(SearchString));
+                scriptures = scriptures.OrderBy(b => b.Book);
+
             }
+
 
             if (!string.IsNullOrEmpty(ScriptureBooks))
             {
-                scriptures = scriptures.Where(x => x.Notes == ScriptureBooks);
+                scriptures = scriptures.Where(x => x.Book == ScriptureBooks);
+                scriptures = scriptures.OrderBy(c => c.Collection);
+                scriptures = scriptures.OrderBy(b => b.Book);
+                scriptures = scriptures.OrderBy(e => e.EntryDate);
+               
+
             }
             Books = new SelectList(await BookQuery.Distinct().ToListAsync());
             Scripture = await scriptures.ToListAsync();

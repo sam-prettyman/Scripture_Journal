@@ -36,6 +36,14 @@ namespace Scripture_Journal.Models
                         Chapter = 10,
                         Verse = 2,
                         Notes = "WOW, I CAN ADD NOTES"
+                    },
+                    new RazorPagesMovie.Models.Scripture
+                    {
+                        Collection = "Book of Mormon",
+                        Book = "Mornoni",
+                        Chapter = 12,
+                        Verse = 5,
+                        Notes = "This is SPARTA "
                     }
                 );
                 context.SaveChanges();
