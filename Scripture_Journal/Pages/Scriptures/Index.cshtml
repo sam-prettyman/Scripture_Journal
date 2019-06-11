@@ -3,10 +3,11 @@
 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Current Notes";
 }
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<h2>Current Notes</h2>
 
-<h2>Index</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -22,6 +23,11 @@
 
         Notes: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
+
+       <!-- Sort:<select asp-for="SortBy">
+        <option value="book">Book</option>
+        <option value="date">Date</option>
+</select>-->
     </p>
 
 
@@ -85,3 +91,8 @@
         }
     </tbody>
 </table>
+<style>
+    body {
+        background-color: blanchedalmond;
+    }
+</style>

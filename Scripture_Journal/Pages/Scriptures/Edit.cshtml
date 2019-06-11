@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 <h2>Edit</h2>
 
@@ -44,7 +45,7 @@
                 <input asp-for="Scripture.Notes" class="form-control" />
                 <span asp-validation-for="Scripture.Notes" class="text-danger"></span>
             </div>
-         
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
@@ -55,6 +56,11 @@
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
+<style>
+    body {
+        background-color: blanchedalmond;
+    }
+</style>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 <h2>Details</h2>
 
@@ -47,10 +48,16 @@
         <dd>
             @Html.DisplayFor(model => model.Scripture.Notes)
         </dd>
-      
+
     </dl>
 </div>
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Scripture.ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>
+
+<style>
+    body {
+        background-color: blanchedalmond;
+    }
+</style>
